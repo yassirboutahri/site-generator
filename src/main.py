@@ -9,12 +9,12 @@ dir_path_static = "./static"
 dir_path_docs = "./docs"
 dir_path_content = "./content"
 template_path = "./template.html"
+default_basepath = "/"
 
 def main():
-    if not sys.argv[1]:
+    basepath = default_basepath
+    if len(sys.argv) > 1:
         basepath = sys.argv[1]
-    else:
-        basepath = "/"
 
         
     print("deleting public directory...")
